@@ -59,13 +59,13 @@ const Generator: Component = () => {
         <input 
           value={key()}
           type='password'
-          class="m-3 border py-2 px-3 text-grey-darkest md:mr-2 rounded-full"
+          class="m-3 w-32 sm:w-56 md:w-64  border sm:p-1 md:p-2 text-grey-darkest md:mr-2 rounded-full"
           onChange={(event: Event) => { handleChange(event, setKey)}}
         />
         <input 
           value={site()}
           type='text'
-          class="m-3 border py-2 px-3 text-grey-darkest md:mr-2 rounded-full"
+          class="m-3 w-32 sm:w-56 md:w-64 border sm:p-1 md:p-2 text-grey-darkest md:mr-2 rounded-full"
           onChange={(event: Event) => { handleChange(event, setSite)}}
         />
         <button 
