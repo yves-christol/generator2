@@ -17,12 +17,12 @@ export const ClockFace: Component<ClockFaceProps> = ({ hour, minute, second, sub
   <svg viewBox="0 0 200 200">
     <g transform="translate(100, 100)">
       {/* static */}
-      <circle class="text-neutral-900" r="99" fill="white" stroke="currentColor"/>
-      <Lines numberOfLines={60} class='subsecond' length={2} width={1} color="gray"/>
-      <Lines numberOfLines={12} class='hour' length={5} width={2} color="black"/>
+      <circle class="text-neutral-900" r="99" fill="#333" stroke="white"/>
+      <Lines numberOfLines={60} class='subsecond' length={2} width={1} color="white"/>
+      <Lines numberOfLines={12} class='hour' length={5} width={2} color="white"/>
       {/* dynamic */}
-      <Hand rotate={hour} class="hour" length={50} width={4} color="black"/>
-      <Hand rotate={minute} class="minute" length={70} width={3} color="black"/>
+      <Hand rotate={hour} class="hour" length={50} width={4} color="white"/>
+      <Hand rotate={minute} class="minute" length={70} width={3} color="white"/>
       <Hand rotate={second} class="second" length={80} width={2} color="red"/>
     </g>
   </svg>
