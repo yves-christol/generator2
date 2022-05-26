@@ -59,19 +59,19 @@ const Generator: Component = () => {
         <input 
           value={key()}
           type='password'
-          class="m-3 w-32 sm:w-56 md:w-64  border sm:p-1 md:p-2 text-grey-darkest md:mr-2 rounded-full"
+          class="m-1 sm:m-3 w-24 sm:w-48 md:w-64  border sm:p-1 md:p-2 text-grey-darkest md:mr-2 rounded-full"
           onChange={(event: Event) => { handleChange(event, setKey)}}
         />
         <input 
           value={site()}
           type='text'
-          class="m-3 w-32 sm:w-56 md:w-64 border sm:p-1 md:p-2 text-grey-darkest md:mr-2 rounded-full"
+          class="m-1 sm:m-3 w-24 sm:w-48 md:w-64 border sm:p-1 md:p-2 text-grey-darkest md:mr-2 rounded-full"
           onChange={(event: Event) => { handleChange(event, setSite)}}
         />
         <button 
           type="submit" 
           value="Submit"
-          class="m-3 bg-orange-700 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded-full"
+          class="m-1 sm:m-3 bg-orange-700 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded-full"
         >
           🔑
         </button>
