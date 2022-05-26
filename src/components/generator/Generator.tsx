@@ -71,7 +71,7 @@ const Generator: Component = () => {
         <button 
           type="submit" 
           value="Submit"
-          class="m-1 sm:m-3 bg-orange-700 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded-full"
+          class="m-1 sm:m-3 bg-orange-700 hover:bg-orange-500 py-2 px-4 rounded-full"
         >
           🔑
         </button>

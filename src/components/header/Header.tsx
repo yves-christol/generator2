@@ -4,7 +4,7 @@ import Clock from '../clock/Clock'
 
 const Header: Component = () => {
   return (
-    <div class="bg-black flex flex-row justify-between">
+    <div class="flex flex-row justify-between">
       <div class="w-12 sm:w-16 md:w-20 p-3 self-center">
         <img src={logo} alt="logo"/>
       </div>

@@ -6,7 +6,7 @@ import Board from './components/board/Board'
 
 const App: Component = () => {
   return (
-    <div class="bg-gray flex flex-col">
+    <div class="flex flex-col">
       <Header />
       <Generator />
       <Board />
