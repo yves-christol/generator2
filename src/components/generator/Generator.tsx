@@ -22,6 +22,8 @@ const Generator: Component = () => {
   const numeric = '0123456789';
   const all = alphabet+caps+numeric;
   const symb = '!#$€%&()*+,-./:;<=>?@[\]^_`{|}~';
+  const style = "m-1 sm:m-3 w-24 sm:w-48 md:w-64 sm:p-1 md:p-2 bg-gray-900 text-red-700 md:mr-2 focus:outline-none focus:outline-red-500 rounded-full"
+
 
   const getChar = (code: string, type: string) => (
     type[parseInt(code, 16) % type.length]
@@ -59,13 +61,13 @@ const Generator: Component = () => {
         <input 
           value={key()}
           type='password'
-          class="m-1 sm:m-3 w-24 sm:w-48 md:w-64 sm:p-1 md:p-2 bg-gray-900 text-red-700 md:mr-2 rounded-full"
+          class={style}
           onChange={(event: Event) => { handleChange(event, setKey)}}
         />
         <input 
           value={site()}
-          type='text'
-          class="m-1 sm:m-3 w-24 sm:w-48 md:w-64 sm:p-1 md:p-2  bg-gray-900 md:mr-2 text-red-700 rounded-full"
+          type='password'
+          class={style}
           onChange={(event: Event) => { handleChange(event, setSite)}}
         />
         <button 
