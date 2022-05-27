@@ -1,6 +1,6 @@
-import type { Accessor, Component } from 'solid-js';
+import type { Accessor, Component } from 'solid-js'
 
-type HandProps = { rotate: Accessor<string>, class: string, length: number, width: number, color: string, fixed?: boolean };
+type HandProps = { rotate: Accessor<string>, class: string, length: number, width: number, color: string, fixed?: boolean }
 
 export const Hand: Component<HandProps> = ({ rotate, length, width, fixed, color, ...rest }) => (
   <line
@@ -12,4 +12,4 @@ export const Hand: Component<HandProps> = ({ rotate, length, width, fixed, color
     transform={rotate()}
     {...rest}
   />
-);
+)

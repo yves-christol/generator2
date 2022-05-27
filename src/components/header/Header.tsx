@@ -1,5 +1,4 @@
-import type { Component } from 'solid-js';
-import logo from './logo.svg';
+import type { Component } from 'solid-js'
 import Clock from '../clock/Clock'
 
 const Header: Component = () => {

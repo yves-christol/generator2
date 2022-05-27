@@ -10,18 +10,18 @@ function copyTextToClipboard(text: string) {
   navigator.clipboard.writeText(text).then(function() {
     console.log('Async: Copying to clipboard was successful!')
   }, function(err) {
-    console.error('Async: Could not copy text: ', err);
+    console.error('Async: Could not copy text: ', err)
   })
 }
 
 const Generator: Component = () => {
-  const [key, setKey] = createSignal('');
-  const [site, setSite] = createSignal('');
-  const alphabet = 'abcdefghijklmnopqrstuvwxyz';
-  const caps = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  const numeric = '0123456789';
-  const all = alphabet+caps+numeric;
-  const symb = '!#$€%&()*+,-./:;<=>?@[\]^_`{|}~';
+  const [key, setKey] = createSignal('')
+  const [site, setSite] = createSignal('')
+  const alphabet = 'abcdefghijklmnopqrstuvwxyz'
+  const caps = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+  const numeric = '0123456789'
+  const all = alphabet+caps+numeric
+  const symb = '!#$€%&()*+,-./:;<=>?@[\]^_`{|}~'
   const style = "m-1 sm:m-3 w-24 sm:w-48 md:w-64 sm:p-1 md:p-2 bg-gray-900 text-red-700 md:mr-2 focus:outline-none focus:outline-red-500 rounded-full"
 
 
@@ -30,23 +30,23 @@ const Generator: Component = () => {
   )
 
   const scramble = () => {
-    const hash = Md5.hashStr(key()+site());
-    let output = getChar(hash.substring(0,2), caps);
-    output += getChar(hash.substring(2,4), alphabet);
-    output += getChar(hash.substring(4,6), numeric);
+    const hash = Md5.hashStr(key()+site())
+    let output = getChar(hash.substring(0,2), caps)
+    output += getChar(hash.substring(2,4), alphabet)
+    output += getChar(hash.substring(4,6), numeric)
     Array(8).fill('-').map((_, i) => {
-      output += getChar(hash.substring(4+i*2, 6+i*2), all);
-    });
-    output += getChar(hash.substring(20,22), symb);
-    return output;
+      output += getChar(hash.substring(4+i*2, 6+i*2), all)
+    })
+    output += getChar(hash.substring(20,22), symb)
+    return output
   }
 
   const handleSubmit = (event: Event) => {
-    event.preventDefault();
-    const password = scramble();
-    copyTextToClipboard(password);
-    setKey('');
-    setSite('');
+    event.preventDefault()
+    const password = scramble()
+    copyTextToClipboard(password)
+    setKey('')
+    setSite('')
     //console.log('Password copied to clipboard');
   }
 
